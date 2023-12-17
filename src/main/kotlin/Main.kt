@@ -6,36 +6,29 @@
  * The inferred type of floating point number will be a Double
  */
 
-/*
- * Higher-order function
- * this is a function that can take other functions as
- * a parameter or return them
- */
-
-fun printFormattedName (firstname: String,
-            lastname: String,
-            formatter: (String, String) -> String) {
-
-    println(formatter(firstname, lastname))
-}
-
-val basicFormatter: (String, String) -> String = {
-    firstname, lastname ->
-    "$lastname $firstname"
-}
-
-val fancyFormatter: (String, String) -> String = {
-        firstname, lastname ->
-    "My name is $firstname $lastname"
-}
-
 fun main(): Unit {
-    printFormattedName("Oddy", "Bassey", basicFormatter)
+    if (true) println("")
 
-    printFormattedName("Oddy", "Bassey", fancyFormatter)
+    var age: Int = 43
 
-    printFormattedName("Oddy", "Bassey") {
-            firstname, lastname ->
-        "$firstname $lastname"
+    if (age < 40) {
+        println("you are a young person")
+    }else if (age > 40 && age < 55) {
+        println("you are a middle aged person")
+    } else {
+        println("you are an elderly person")
+    }
+
+    when {
+        age < 20 -> println("a child")
+        age in 20..40 -> println("young person")
+        age in 40..55 -> println("middle aged person")
+        else -> println("elderly person")
+    }
+
+    when (age) {
+        43 -> println("this man")
+        in 20..40 -> println("young person")
+        55 -> println("middle aged person")
     }
 }
