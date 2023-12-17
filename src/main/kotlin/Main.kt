@@ -6,26 +6,27 @@
  * The inferred type of floating point number will be a Double
  */
 
-var greetingFunction: () -> Unit = {
-    println("Hello everyone :)")
-}
+/*
+ * Higher-order function
+ * this is a function that can take other functions as
+ * a parameter or return them
+ */
 
-var getTodayDate: (name: String) -> String = {
-    "$it today is 17th December, 2023."
+fun printAreaOfRectangle(length: Int, breadth: Int, calcArea: (Int, Int) -> Int) {
+    println("The area of the rectangle is ${calcArea(length, breadth)}")
 }
 
 fun main(): Unit {
-    greetingFunction()
-    println(getTodayDate("Computer"))
+    printAreaOfRectangle(6, 5, { length, breadth ->
+        length * breadth
+    })
 
-    greetingFunction = {
-        println("Kotlin is beautiful :)")
+    /*
+     * Using trailing lambda syntax, the lambda in a parameter list
+     * is moved outside the parenthesis of a function call when it is the
+     * last parameter
+     */
+    printAreaOfRectangle(12, 5) { length, breadth ->
+        length * breadth
     }
-
-    getTodayDate = {name ->
-        "$name today is 17-Dec-2023."
-    }
-
-    greetingFunction.invoke();
-    println(getTodayDate.invoke("Revolt"))
 }
