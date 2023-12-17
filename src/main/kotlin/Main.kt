@@ -7,38 +7,22 @@
  */
 
 fun main(args: Array<String>) {
-    val aChar: Char = 'a'
-    val numericChar = '1'
-    val newlineChar = '\n'
+    var nullableString: String? = null // non-nullable variable
 
-    //val concatVal = 'a' + 'b' // character literals can not be concatenated
-    //val concatVal = 'ab' // too many values in character literal
+    /*
+     * asserts value is not null before accessing it else it throws an exception
+     */
+    println(nullableString!!.length)
 
-    val aString: String = "Hello Kotlin"
-    val aString2 = "Hello \n World!!"
-    print(aString2)
-
-    val rawString = """
-        Some
-            multiline
-        text
-             with different
-             >>formatting
-        """".trimMargin(">>")
-
-    print(rawString)
-
-    val concatString = "Hello" + "there!!" // String concatenation
-    val concatNumber = "It only " + 11
-    println(concatNumber)
-
-    val number = 834
-    println("The number $number") // using string template
-    println("The number ${number + 540}") // using string template with arithmetic
-
-    println("Hi".isNotEmpty())
-    println(" ".isNotEmpty())
-    println("Hi".isNotBlank())
-    println(" ".isNotBlank())
-    println("Kotlin is a lovely JVM language ".contains("Kotlin"))
+    /*
+     * Safe call operator (?.)
+     * It safely accesses properties or methods of an object by avoiding
+     * null-pointer exceptions. If the value isn't present it returns null
+     *
+     * Elvis operator (?:)
+     * This is also used with the safe-call operator to return a default value
+     * if the expression evaluates to null
+     */
+    println(nullableString?.length)
+    println(nullableString?.length ?: "Value is null")
 }
