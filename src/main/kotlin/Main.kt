@@ -7,25 +7,38 @@
  */
 
 fun main(args: Array<String>) {
-    val num1: Int = 23 // 32bits
-    val num3: Byte = 2 // 8bits
-    val num4: Short = 4 // 16bits
-    val num5: Long = 33 // 64bits
+    val aChar: Char = 'a'
+    val numericChar = '1'
+    val newlineChar = '\n'
 
-    val num2 = 78 // (type inference) inferred as Int
-    val num6 = 100000000000 // type inference, inferred as Long
+    //val concatVal = 'a' + 'b' // character literals can not be concatenated
+    //val concatVal = 'ab' // too many values in character literal
 
-    val num7 = 10L
-    val num8: UInt = 21u
-    val num9: ULong = 23UL
+    val aString: String = "Hello Kotlin"
+    val aString2 = "Hello \n World!!"
+    print(aString2)
 
-    val num10 = 6.45 // inferred to Double
-    val num11 = 3.3f // inferred to Float
+    val rawString = """
+        Some
+            multiline
+        text
+             with different
+             >>formatting
+        """".trimMargin(">>")
 
-    // Numeric type conversion
-    println(233.4.toInt())
-    println(233.4.toFloat())
-    println(233.654.toULong())
-    println(100_000_000.toByte())
-    println(123_456_789.toByte())
+    print(rawString)
+
+    val concatString = "Hello" + "there!!" // String concatenation
+    val concatNumber = "It only " + 11
+    println(concatNumber)
+
+    val number = 834
+    println("The number $number") // using string template
+    println("The number ${number + 540}") // using string template with arithmetic
+
+    println("Hi".isNotEmpty())
+    println(" ".isNotEmpty())
+    println("Hi".isNotBlank())
+    println(" ".isNotBlank())
+    println("Kotlin is a lovely JVM language ".contains("Kotlin"))
 }

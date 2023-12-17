@@ -1,14 +1,8 @@
 
-Qkotlin:S1172	"-Remove this unused function parameter "args".(¥å¥ûÿÿÿÿ8«´“ÛÆ1
-Nkotlin:S1481"*Remove this unused "num11" local variable.(ÏÇÉÿÿÿÿÿ8¬´“ÛÆ1
-Hkotlin:S1481"*Remove this unused "num10" local variable.(ï×‘8¬´“ÛÆ1
-Hkotlin:S1481")Remove this unused "num9" local variable.(ºŞÂİ8¬´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num8" local variable.(Â Öƒşÿÿÿÿ8­´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num7" local variable.(Ø¡£ëıÿÿÿÿ8­´“ÛÆ1
-Gkotlin:S1481")Remove this unused "num6" local variable.(ÕÆ„8­´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num2" local variable.(Ÿ¼ˆÄùÿÿÿÿ8­´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num5" local variable.(Ç¢á€ùÿÿÿÿ8­´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num4" local variable.(ú—Ü®ùÿÿÿÿ8­´“ÛÆ1
-Mkotlin:S1481")Remove this unused "num3" local variable.(…öÀèûÿÿÿÿ8­´“ÛÆ1
-Mkotlin:S1481
-")Remove this unused "num1" local variable.(íÚĞ´ûÿÿÿÿ8­´“ÛÆ1
+Qkotlin:S1172	"-Remove this unused function parameter "args".(¥å¥ûÿÿÿÿ8õóíÆ1
+Okotlin:S1481"1Remove this unused "concatString" local variable.(ÓŒáb8÷óíÆ1
+Kkotlin:S1481",Remove this unused "aString" local variable.(–Áè8÷óíÆ1
+Okotlin:S1481"0Remove this unused "newlineChar" local variable.(Ô»Â8÷óíÆ1
+Tkotlin:S1481"0Remove this unused "numericChar" local variable.(ú¡áøÿÿÿÿ8÷óíÆ1
+Nkotlin:S1481
+"*Remove this unused "aChar" local variable.(Á±Çğüÿÿÿÿ8÷óíÆ1
