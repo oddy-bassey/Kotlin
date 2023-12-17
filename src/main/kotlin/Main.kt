@@ -7,29 +7,21 @@
  */
 
 /*
- * By default, all functions are public (have public access modifier)
- * that is they're available to use within any file in the project
- * or in any project that depends on our project.
+ * Function Parameters
+ * supports default arguments and name parameters which allow us to
+ * specify which parameter we're providing actual values for
+ *
+ * Note: a Unit return type is an insignificant return type in Kotlin
+ * The use of Unit is particularly relevant when you want to indicate that a function
+ * has a side effect (like printing to the console or modifying external state) but
+ * doesn't produce a result that needs to be used.
  */
-fun main(args: Array<String>) {
-    println("Hello World")
-    printGreeting("Oddy Bassey")
+fun main(): Unit {
+    fun printGreeting(
+        greeting: String = "Hi there",
+        name: String = "Oddy",
+        age: Int = 27
+    ) = "$greeting, I'm $name and I am $age years old."
+
+    println(printGreeting(name = "Bassey Oddy")) // using named arguments
 }
-
-fun printGreeting(name: String) {
-    /* Local Function: A function defined inside another function
-     * and not accessed outside of that function scope
-     */
-    fun getAddress() = "Uyo, Akwa-Ibom State"
-
-    println("${getGreeting()} $name, and I'm ${getAge()} years old and i live in ${getAddress()}")
-}
-
-fun getGreeting(): String {
-    return "Hi, I'm"
-}
-
-/* inferring function return type
- * the function is also known as a "Single Expression Function"
- */
-fun getAge() = 27
