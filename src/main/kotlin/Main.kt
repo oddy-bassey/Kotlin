@@ -33,4 +33,9 @@ fun main(): Unit {
     printFormattedName("Oddy", "Bassey", basicFormatter)
 
     printFormattedName("Oddy", "Bassey", fancyFormatter)
+
+    printFormattedName("Oddy", "Bassey") {
+            firstname, lastname ->
+        "$firstname $lastname"
+    }
 }
