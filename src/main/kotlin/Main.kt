@@ -6,23 +6,30 @@
  * The inferred type of floating point number will be a Double
  */
 
+/*
+ * By default, all functions are public (have public access modifier)
+ * that is they're available to use within any file in the project
+ * or in any project that depends on our project.
+ */
 fun main(args: Array<String>) {
-    var nullableString: String? = null // non-nullable variable
-
-    /*
-     * asserts value is not null before accessing it else it throws an exception
-     */
-    println(nullableString!!.length)
-
-    /*
-     * Safe call operator (?.)
-     * It safely accesses properties or methods of an object by avoiding
-     * null-pointer exceptions. If the value isn't present it returns null
-     *
-     * Elvis operator (?:)
-     * This is also used with the safe-call operator to return a default value
-     * if the expression evaluates to null
-     */
-    println(nullableString?.length)
-    println(nullableString?.length ?: "Value is null")
+    println("Hello World")
+    printGreeting("Oddy Bassey")
 }
+
+fun printGreeting(name: String) {
+    /* Local Function: A function defined inside another function
+     * and not accessed outside of that function scope
+     */
+    fun getAddress() = "Uyo, Akwa-Ibom State"
+
+    println("${getGreeting()} $name, and I'm ${getAge()} years old and i live in ${getAddress()}")
+}
+
+fun getGreeting(): String {
+    return "Hi, I'm"
+}
+
+/* inferring function return type
+ * the function is also known as a "Single Expression Function"
+ */
+fun getAge() = 27
