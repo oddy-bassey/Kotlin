@@ -6,22 +6,26 @@
  * The inferred type of floating point number will be a Double
  */
 
-/*
- * Function Parameters
- * supports default arguments and name parameters which allow us to
- * specify which parameter we're providing actual values for
- *
- * Note: a Unit return type is an insignificant return type in Kotlin
- * The use of Unit is particularly relevant when you want to indicate that a function
- * has a side effect (like printing to the console or modifying external state) but
- * doesn't produce a result that needs to be used.
- */
-fun main(): Unit {
-    fun printGreeting(
-        greeting: String = "Hi there",
-        name: String = "Oddy",
-        age: Int = 27
-    ) = "$greeting, I'm $name and I am $age years old."
+var greetingFunction: () -> Unit = {
+    println("Hello everyone :)")
+}
 
-    println(printGreeting(name = "Bassey Oddy")) // using named arguments
+var getTodayDate: (name: String) -> String = {
+    "$it today is 17th December, 2023."
+}
+
+fun main(): Unit {
+    greetingFunction()
+    println(getTodayDate("Computer"))
+
+    greetingFunction = {
+        println("Kotlin is beautiful :)")
+    }
+
+    getTodayDate = {name ->
+        "$name today is 17-Dec-2023."
+    }
+
+    greetingFunction.invoke();
+    println(getTodayDate.invoke("Revolt"))
 }
