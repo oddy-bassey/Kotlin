@@ -12,21 +12,25 @@
  * a parameter or return them
  */
 
-fun printAreaOfRectangle(length: Int, breadth: Int, calcArea: (Int, Int) -> Int) {
-    println("The area of the rectangle is ${calcArea(length, breadth)}")
+fun printFormattedName (firstname: String,
+            lastname: String,
+            formatter: (String, String) -> String) {
+
+    println(formatter(firstname, lastname))
+}
+
+val basicFormatter: (String, String) -> String = {
+    firstname, lastname ->
+    "$lastname $firstname"
+}
+
+val fancyFormatter: (String, String) -> String = {
+        firstname, lastname ->
+    "My name is $firstname $lastname"
 }
 
 fun main(): Unit {
-    printAreaOfRectangle(6, 5, { length, breadth ->
-        length * breadth
-    })
+    printFormattedName("Oddy", "Bassey", basicFormatter)
 
-    /*
-     * Using trailing lambda syntax, the lambda in a parameter list
-     * is moved outside the parenthesis of a function call when it is the
-     * last parameter
-     */
-    printAreaOfRectangle(12, 5) { length, breadth ->
-        length * breadth
-    }
+    printFormattedName("Oddy", "Bassey", fancyFormatter)
 }
