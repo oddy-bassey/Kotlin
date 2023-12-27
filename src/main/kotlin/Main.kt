@@ -1,29 +1,17 @@
 
 fun main(): Unit {
-    val value: Any = "32"
+    var counter = 0
 
-    checkTypeWithIf(value)
-    checkInputWithWhen(null)
-}
+    println("While Loop")
+    while (counter <= 5) {
+        println(counter)
 
-fun checkTypeWithIf(input: Any?) {
-     if (input is String) {
-         if (input == null) {
-             println("input string is null")
-         } else {
-             println("input is a String with length ${input.length}")
-         }
-     }
-
-    if (input is Int) {
-        println("input is an Int")
+        counter++;
     }
-}
 
-fun checkInputWithWhen(input: Any?) {
-    when (input) {
-        null -> println("input is a null value")
-        is String -> println("input is a String with length ${input.length}")
-        is Int -> println("input is an Int")
-    }
+    println("Do-While Loop")
+    do {
+        println(counter)
+        counter-=1
+    } while (counter > 0)
 }
