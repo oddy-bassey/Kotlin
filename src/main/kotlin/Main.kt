@@ -7,28 +7,20 @@
  */
 
 fun main(): Unit {
-    if (true) println("")
+    val message1 = getMessageWithIf(32)
+    println(message1)
 
-    var age: Int = 43
+    val message2 = getMessageWithWhen(85)
+    println(message2)
+}
 
-    if (age < 40) {
-        println("you are a young person")
-    }else if (age > 40 && age < 55) {
-        println("you are a middle aged person")
-    } else {
-        println("you are an elderly person")
-    }
+fun getMessageWithIf(value: Int) = if (value>50) {
+    "pipeline is overloaded"
+} else {
+    "pipeline in stable condition"
+}
 
-    when {
-        age < 20 -> println("a child")
-        age in 20..40 -> println("young person")
-        age in 40..55 -> println("middle aged person")
-        else -> println("elderly person")
-    }
-
-    when (age) {
-        43 -> println("this man")
-        in 20..40 -> println("young person")
-        55 -> println("middle aged person")
-    }
+fun getMessageWithWhen(value: Int) =  when {
+    value > 50 -> "pipeline overload"
+    else -> "pipeline in stable condition"
 }
