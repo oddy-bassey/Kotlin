@@ -1,10 +1,4 @@
-/*
- * For loop using infix functions like:
- * - until
- * - downTo
- * - step
- * - in
- */
+
 fun main(): Unit {
     println("List")
 
