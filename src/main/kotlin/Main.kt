@@ -1,30 +1,42 @@
 
 fun main(): Unit {
-    println("List")
+    /*
+     * The easiest way to create a set in kotlin is to use a builder function
+     */
+    println("Immutable Set")
+    val languages = setOf("Java", "Kotlin", "C++", "Javascript")
 
-    val list1: List<String> = listOf("debby", "mango", "rice");
-    val list2 = listOf(1, 2, 3, null)
-    val list3 = List<Int>(5) {index ->
-        index * 2
+    println("the size of the set is ${languages.size}")
+    for(language in languages) {
+        println("- $language")
     }
-    list3.forEach { println(it) }
-    val emptyList: List<Int> = emptyList();
-    val firstValue = list3.get(0)
-    val secondValue = list3[1]
+    println("Oddy has started learning python? ${languages.contains("Python")}")
 
-    val languages = mutableListOf<String>("Java", "Kotlin", "C#", "Php");
-    languages.set(0, "JAVA")
-    languages[languages.size-1] = "PHP"
+    println("Mutable Set")
+    val frameworks: MutableSet<String> = mutableSetOf("Springboot", "Quarkus", "JavaFx", "Android", "nodejs");
+    frameworks.remove("nodejs");
+    frameworks.forEach { println(it) }
 
-    languages.add("Javascript")
-    languages.add("C++")
+    println("Immutable Maps")
+    val scores = mapOf(Pair("Daniel", 32), Pair("Richard", 67), "Umeh" to 76, "Oddy" to 98);
+    println("Richard scored ${scores["Richard"]}")
+    println("printing the value of the map using the keyset")
+    for(record in scores) {
+        println("${record.key} scored ${record.value}")
+    }
 
-    languages.removeAt(2)
-    languages.remove("PHP")
+    println("printing the value of the map using map destructuring")
+    for((key, value) in scores) {
+        println("$key scored $value")
+    }
 
-    languages.forEach{ println(it) }
+    println("Report contains Richard score? ${scores.containsKey("Richard")}")
+    println("Report contains Bangu score? ${scores.containsKey("Bangu")}")
 
-    // type compatibility
-    val data: List<String> = mutableListOf("dog", "fish", "cat")
-    // data[0] = "we": this will not work because the mutable list has now been assigned to an immutable list
+    println("Mutable Maps")
+    val weights: MutableMap<String, Double> = mutableMapOf("Daniel" to 43.3, "Emma" to 78.0, "Vicky" to 67.5)
+    weights["Panny"] = 75.9
+    weights.remove("Daniel")
+    weights.replace("Emma", 87.9)
+    weights.forEach { println(it) }
 }
