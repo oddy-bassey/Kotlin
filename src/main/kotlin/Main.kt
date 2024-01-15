@@ -38,5 +38,5 @@ fun main(): Unit {
     weights["Panny"] = 75.9
     weights.remove("Daniel")
     weights.replace("Emma", 87.9)
-    weights.forEach { println(it) }
+    weights.forEach {key, value -> println("$key : $value") }
 }
