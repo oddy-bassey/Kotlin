@@ -1,42 +1,52 @@
 
 fun main(): Unit {
     /*
-     * The easiest way to create a set in kotlin is to use a builder function
+     * Working with collections
      */
-    println("Immutable Set")
-    val languages = setOf("Java", "Kotlin", "C++", "Javascript")
 
-    println("the size of the set is ${languages.size}")
-    for(language in languages) {
-        println("- $language")
-    }
-    println("Oddy has started learning python? ${languages.contains("Python")}")
+    val readOnlyList = listOf(1, 2, 3)
+    val readOnlySet = setOf(3, 4, 5)
+    val readOnlymap = mapOf(1 to "a", 2 to "b")
 
-    println("Mutable Set")
-    val frameworks: MutableSet<String> = mutableSetOf("Springboot", "Quarkus", "JavaFx", "Android", "nodejs");
-    frameworks.remove("nodejs");
-    frameworks.forEach { println(it) }
+    val mutableList = mutableListOf(43, 23, 12)
+    val mutableMap = mutableMapOf(1 to "first", 2 to "second", 3 to "third")
+    val mutableSet = mutableSetOf(8, 7, 6)
 
-    println("Immutable Maps")
-    val scores = mapOf(Pair("Daniel", 32), Pair("Richard", 67), "Umeh" to 76, "Oddy" to 98);
-    println("Richard scored ${scores["Richard"]}")
-    println("printing the value of the map using the keyset")
-    for(record in scores) {
-        println("${record.key} scored ${record.value}")
-    }
+    println(readOnlyList.size)
+    println(mutableList.size)
 
-    println("printing the value of the map using map destructuring")
-    for((key, value) in scores) {
-        println("$key scored $value")
+    println("isempty and isnotempty method------------")
+    println(mutableSet.isEmpty())
+    println(readOnlySet.isNotEmpty())
+
+    println("printing list------------")
+    for (element in readOnlySet) {
+        println(element)
     }
 
-    println("Report contains Richard score? ${scores.containsKey("Richard")}")
-    println("Report contains Bangu score? ${scores.containsKey("Bangu")}")
+    mutableMap.forEach {key, value -> println(value) }
 
-    println("Mutable Maps")
-    val weights: MutableMap<String, Double> = mutableMapOf("Daniel" to 43.3, "Emma" to 78.0, "Vicky" to 67.5)
-    weights["Panny"] = 75.9
-    weights.remove("Daniel")
-    weights.replace("Emma", 87.9)
-    weights.forEach {key, value -> println("$key : $value") }
+    println("first method------------")
+    println(readOnlyList.first())
+    println(mutableSet.first())
+
+    println("take method------------")
+    println(mutableList.take(3))
+    println(readOnlySet.take(2))
+
+    println("filter method------------")
+    println(mutableMap.filter { entry -> entry.key < 2})
+    println(readOnlySet.filter { value -> value > 1})
+
+    val languages = mapOf(
+        "Kotlin" to 2,
+        "Java" to 1,
+        "C++" to 3,
+        "Javascript" to 4,
+        "Python" to 5
+    )
+    println(languages.filter { it.value<= 4 })
+    println(languages.filter { it.value<= 4 }
+        .map { it.key }
+        .sorted())
 }
