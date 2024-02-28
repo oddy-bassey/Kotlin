@@ -1,17 +1,11 @@
 import java.io.File
+import kotlin.io.path.writeLines
 
 fun main(): Unit {
-    print("Enter the name of the user: ")
-    val username = readln() ?: ""
-    println("User entered: ${username}")
+    val scoresFile = File("src/scores.txt")
+    scoresFile.forEachLine { line -> println(line) }
 
-    print("Enter a file name: ")
-    val filename = readln()
-    val isFileValid = File(filename).isFile
-
-    if(isFileValid) {
-        println("It is a valid file")
-    }else{
-        println("It's not a valid file")
-    }
+    val sortedLines = scoresFile.readLines().sorted()
+    val outputFile = File("sorted-scores.txt").toPath()
+    outputFile.writeLines(sortedLines)
 }
