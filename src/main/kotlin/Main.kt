@@ -1,9 +1,17 @@
+import java.io.File
 
-fun main(vararg args: String): Unit {
-    if (args.isEmpty()) {
-        print("Pass at least one runtime argument")
-        return
+fun main(): Unit {
+    print("Enter the name of the user: ")
+    val username = readln() ?: ""
+    println("User entered: ${username}")
+
+    print("Enter a file name: ")
+    val filename = readln()
+    val isFileValid = File(filename).isFile
+
+    if(isFileValid) {
+        println("It is a valid file")
+    }else{
+        println("It's not a valid file")
     }
-    println("first argument is ${args[0]}")
-    args.forEach { print("${it} ") }
 }
