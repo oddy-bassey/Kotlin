@@ -5,16 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bf9fe55-4f2a-4457-b860-be94a83b3ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ass-scores.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Kotlin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9af4e2d0d2c57c3940a4b8c206a2733cec68a54d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/a/9af4e2d0d2c57c3940a4b8c206a2733cec68a54d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/KotlinTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d83ae3847b7d408136086cc5e9e95f5f7c126ed5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d83ae3847b7d408136086cc5e9e95f5f7c126ed5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -42,29 +56,35 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/revoltcode/Documents/IdeaProjects/Kotlin",
+    "last_opened_file_path": "/home/revoltcode/Documents/IdeaProjects/Kotlin/src/test/resources/hamcrest-2.2.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.1702509",
+    "project.structure.side.proportion": "0.2316534",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/kotlin" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Kotlintest.get random throws exception when negative value is passed">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -95,27 +115,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
+    <configuration name="Kotlintest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Kotlin" />
-      <shortenClasspath name="NONE" />
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Kotlintest.get random returns value between 0 and 100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Kotlin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
+      <option name="METHOD_NAME" value="get random returns value between 0 and 100" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Kotlintest.get random throws exception when negative value is passed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Kotlin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
+      <option name="METHOD_NAME" value="get random throws exception when negative value is passed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Kotlintest.verifyFalseNotTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Kotlin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
+      <option name="METHOD_NAME" value="verifyFalseNotTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Kotlintest.verifyTrueIsAlwaysTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Kotlin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
+      <option name="METHOD_NAME" value="verifyTrueIsAlwaysTrue" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Kotlintest.get random throws exception when negative value is passed" />
+        <item itemvalue="JUnit.Kotlintest.get random returns value between 0 and 100" />
+        <item itemvalue="JUnit.Kotlintest.verifyFalseNotTrue" />
+        <item itemvalue="JUnit.Kotlintest" />
+        <item itemvalue="JUnit.Kotlintest.verifyTrueIsAlwaysTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +220,7 @@
       <workItem from="1708960426506" duration="604000" />
       <workItem from="1709104102227" duration="8846000" />
       <workItem from="1709126033519" duration="259000" />
-      <workItem from="1709378283194" duration="4194000" />
+      <workItem from="1709378283194" duration="9599000" />
     </task>
     <servers />
   </component>

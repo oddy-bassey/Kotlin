@@ -11,6 +11,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="Kotlin" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="dfb3cc75-196e-4784-9e61-b8670ebb90c6" />
