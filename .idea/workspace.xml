@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bf9fe55-4f2a-4457-b860-be94a83b3ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9af4e2d0d2c57c3940a4b8c206a2733cec68a54d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/a/9af4e2d0d2c57c3940a4b8c206a2733cec68a54d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/KotlinTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d83ae3847b7d408136086cc5e9e95f5f7c126ed5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d83ae3847b7d408136086cc5e9e95f5f7c126ed5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AnalyticsClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ViewModelTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Kotlin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Kotlin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -60,7 +58,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/revoltcode/Documents/IdeaProjects/Kotlin/src/test/resources/hamcrest-2.2.jar",
+    "last_opened_file_path": "/home/revoltcode/Documents/IdeaProjects/Kotlin/src/test/resources/byte-buddy-1.14.12.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,7 +82,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Kotlintest.get random throws exception when negative value is passed">
+  <component name="RunManager" selected="JUnit.ViewModelTest.trackEvent">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -154,11 +152,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Kotlintest.verifyTrueIsAlwaysTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ViewModelTest.trackEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Kotlin" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Kotlintest" />
-      <option name="METHOD_NAME" value="verifyTrueIsAlwaysTrue" />
+      <option name="MAIN_CLASS_NAME" value="ViewModelTest" />
+      <option name="METHOD_NAME" value="trackEvent() is called when submitClick is called" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ViewModelTest.trackEvent" />
         <item itemvalue="JUnit.Kotlintest.get random throws exception when negative value is passed" />
         <item itemvalue="JUnit.Kotlintest.get random returns value between 0 and 100" />
         <item itemvalue="JUnit.Kotlintest.verifyFalseNotTrue" />
         <item itemvalue="JUnit.Kotlintest" />
-        <item itemvalue="JUnit.Kotlintest.verifyTrueIsAlwaysTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +218,7 @@
       <workItem from="1708960426506" duration="604000" />
       <workItem from="1709104102227" duration="8846000" />
       <workItem from="1709126033519" duration="259000" />
-      <workItem from="1709378283194" duration="9599000" />
+      <workItem from="1709378283194" duration="12407000" />
     </task>
     <servers />
   </component>

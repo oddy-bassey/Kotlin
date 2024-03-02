@@ -26,3 +26,9 @@ _
 /src/test/kotlin/RandomNumberGeneratorTest.kt.kt,3/6/36e853c0f4037847a0438aa14e1577671b4f412f
 M
 src/test/kotlin/KotlinTest.kt,9/f/9f48f12778b15ffa2bd0a4e288717f0e337f54bd
+R
+"src/main/kotlin/AnalyticsClient.kt,5/d/5d96d4cf800d2c66412d1414e16e82db15122807
+L
+src/main/kotlin/ViewModel.kt,5/a/5afeda4348db259af59d777af3343265ea81b15f
+P
+ src/test/kotlin/ViewModelTest.kt,d/b/dbea3d7ea572284ff3d370a33326d026bed22d2c

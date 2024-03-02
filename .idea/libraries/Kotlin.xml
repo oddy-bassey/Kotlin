@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/src/test/resources/kotlin-test-1.9.22.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/test/resources/junit-4.13.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/test/resources/hamcrest-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/resources/mockito-core-5.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/resources/byte-buddy-1.14.12.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
