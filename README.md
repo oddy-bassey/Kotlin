@@ -12,6 +12,11 @@ Java Class Library, but type inference allows its syntax to be more concise.
 * Working with inputs and outputs
 * Testing kotlin code
 
+## Advanced Kotlin
+* Object Oriented Programming (OOP)
+* Idiomatic Kotlin
+* Asynchronous code with Kotlin coroutines
+
 ## Note
 Key features that provide first class solutions to some of the most common programming problems
 * Top-level and higher-order functions
