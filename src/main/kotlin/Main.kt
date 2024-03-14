@@ -1,15 +1,17 @@
 
 fun main(): Unit {
-    // Note that object classes are thread safe singletons
-    print(NetworkConfig.baseUrl)
-    print(NetworkConfig.getNetworkDetails())
+    var state: UIState = UIState.Loading
+    render(state)
 
-    // object expression
-    val provider: NetworkInfoProvider = object: NetworkInfoProvider {
-        override fun getNetworkDetails(): String {
-            TODO("Not yet implemented")
-        }
-    }
+    state = UIState.Loaded("Mario", "Rumble jack")
+    render(state)
 
-    provider.getNetworkDetails()
+    state = UIState.Error(IllegalStateException())
+    render(state)
+}
+
+fun render(state: UIState) = when(state) {
+    is UIState.Error -> println("Error")
+    is UIState.Loaded -> println("Loaded: ${state.title}")
+    UIState.Loading -> println("Loading...")
 }

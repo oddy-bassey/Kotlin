@@ -11,3 +11,5 @@ P
  src/main/kotlin/NetworkConfig.kt,6/a/6ad0103edd58f76e50d06b2aa0dc9a279d7e8153
 V
 &src/main/kotlin/NetworkInfoProvider.kt,1/a/1ae0e2dad8ca07e56d6ec82f22cd9f32b3e76a96
+J
+src/main/kotlin/UIState.kt,2/d/2d92eba379d8f45f8366a218d929d7d745e28de7
