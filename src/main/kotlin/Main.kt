@@ -1,17 +1,18 @@
 
+/* Companion Object
+ * A companion object is an object decoration within a class
+ * They are most useful in organising methods and properties so they
+ * re only accessible by first referencing an enclosing class name.
+ *
+ * NOTE:
+ * when deciding between a companion object or top level property or
+ * function, consider whether or not the function should be globally
+ * available or whether it makes more sense within a context of another
+ * explicit class.
+ */
 fun main(): Unit {
-    var state: UIState = UIState.Loading
-    render(state)
 
-    state = UIState.Loaded("Mario", "Rumble jack")
-    render(state)
-
-    state = UIState.Error(IllegalStateException())
-    render(state)
-}
-
-fun render(state: UIState) = when(state) {
-    is UIState.Error -> println("Error")
-    is UIState.Loaded -> println("Loaded: ${state.title}")
-    UIState.Loading -> println("Loading...")
+    val controller = SearchController.create("Kotlin")
+    // or
+    val controller2 = SearchController.Companion.create("Java")
 }
