@@ -1,5 +1,6 @@
 
 fun main(): Unit {
+    // Note that object classes are thread safe singletons
     print(NetworkConfig.baseUrl)
     print(NetworkConfig.getNetworkDetails())
 
