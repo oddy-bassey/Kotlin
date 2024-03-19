@@ -4,6 +4,7 @@ import javax.annotation.processing.Messager
  */
 fun main(): Unit {
     enhanceMessage("God is good and great") {
+        println(it)
         add(12, 54)
     }
 }
@@ -11,6 +12,6 @@ fun main(): Unit {
 // val lambdaName : Type = {parameterList -> codeBody}
 val add: (Int, Int) -> Int = {a,b -> a + b}
 
-fun enhanceMessage(message: String, funAsParam: () -> Int) {
-    println("$message ${funAsParam()}")
+fun enhanceMessage(message: String, funAsParam: (String) -> Int) {
+    println("$message ${funAsParam("Hey")}")
 }
