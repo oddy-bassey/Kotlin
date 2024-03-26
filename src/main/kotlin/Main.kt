@@ -1,17 +1,29 @@
 import javax.annotation.processing.Messager
+import kotlin.random.Random
 
 /* Extension functions
  */
 fun main(): Unit {
-    enhanceMessage("God is good and great") {
-        println(it)
-        add(12, 54)
+    when (val result = getString()) {
+        is StringResult.Success -> println(result.value)
+        is StringResult.Error -> println("There was an error :[ !!")
     }
 }
 
-// val lambdaName : Type = {parameterList -> codeBody}
-val add: (Int, Int) -> Int = {a,b -> a + b}
+fun getRandomString(): String {
+    val rand = Random.nextInt(10)
 
-fun enhanceMessage(message: String, funAsParam: (String) -> Int) {
-    println("$message ${funAsParam("Hey")}")
+    if (rand > 5) {
+        throw IllegalStateException()
+    } else {
+        return rand.toString()
+    }
+}
+
+fun getString(): StringResult {
+    return try {
+        StringResult.Success(getRandomString())
+    } catch (error: Throwable) {
+        StringResult.Error(error)
+    }
 }
