@@ -1,9 +1,30 @@
+import java.util.concurrent.Executors
+
+class CustomThread: Thread("Custom Thread") {
+    override fun run() {
+        super.run()
+        println(Thread.currentThread().name)
+        println("executing process in thread!")
+    }
+}
+
+class DeviceThread: Runnable {
+    override fun run() {
+        println(Thread.currentThread().name)
+        println("executing device process in thread!")
+    }
+}
+
+val singleThreadExecutor = Executors.newSingleThreadExecutor()
+val multiThreadExecutor = Executors.newFixedThreadPool(3)
 
 fun main(): Unit {
-    ListUtils.nonEmptyList(arrayOf(1, 2, 4, 5))
-    ListUtils.setToNonEmptyList(setOf("a", "b", "d", "c"))
+    println(Thread.currentThread().name)
+//    CustomThread().start()
+//    Thread(DeviceThread()).start()
+//    singleThreadExecutor.submit(DeviceThread())
 
-    // replacement
-    arrayOf(1, 2, 4, 5).nonEmptyList()
-    setOf("a", "b", "d", "c").toNonEmptyList()
+    for (i in 0..10) {
+        multiThreadExecutor.submit(DeviceThread())
+    }
 }
