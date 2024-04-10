@@ -25,6 +25,6 @@ Key features that provide first class solutions to some of the most common progr
 * Coroutines
 
 ## Additional resources
-- Kotlin's "Getting Started" guide
-- Official Kotlin repo on GitHub
-- Kotlin Koans
+- [Kotlin's "Getting Started" guide](https://kotlinlang.org/docs/getting-started.html)
+- [Official Kotlin repo on GitHub](https://github.com/JetBrains/kotlin)
+- [Kotlin Koans](https://kotlinlang.org/docs/koans.html)
