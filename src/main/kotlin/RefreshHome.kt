@@ -29,15 +29,16 @@ private fun cancelJobs(vararg jobs: Job) {
 
 fun main(): Unit = runBlocking {
 
-    // here, after executing refreshTasks and refreshReservation in an IO thread,
-    // updateUI is then executed in the context provided by the runBlocking scope (main thread)
-    launch(Dispatchers.IO) {
-        refreshTasks()
-        refreshReservation()
+    /* running the refresh calls in an async coroutine which suspends the
+     * results until it is available (async coroutine is done executing)
+     * this facilitates parallel execution of both coroutines
+     */
+    val task1 = async { refreshTasks() }
+    val task2 = async { refreshReservation() }
 
-        withContext(this@runBlocking.coroutineContext) {
-            updateUI()
-        }
+    awaitAll(task1, task2)
+    withContext(this@runBlocking.coroutineContext) {
+        updateUI()
     }
     refreshUser()
 }
