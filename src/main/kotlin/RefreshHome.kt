@@ -28,11 +28,10 @@ private fun cancelJobs(vararg jobs: Job) {
  */
 
 fun main(): Unit = runBlocking {
-
     /* this executes refreshTasks and refreshReservation in a coroutine
-     * running on the main thread
+     * running on a different thread (worker thread or IO thread)
      */
-    launch {
+    launch(Dispatchers.IO) {
         refreshTasks()
         refreshReservation()
     }
