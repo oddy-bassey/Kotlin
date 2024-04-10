@@ -23,8 +23,13 @@ private fun cancelJobs(vararg jobs: Job) {
 
 /* Working with coroutines
  * Note:
- * Code within a coroutine runs sequentially and a delay in a coroutine
- * does not hinder/block the underlying thread
+ * - Code within a coroutine runs sequentially and a delay in a coroutine
+ *   does not hinder/block the underlying thread.
+ * - Whether we start a coroutine using lunch or async, we can cancel
+ *   that coroutine and it's children by calling cancel on that coroutine's
+ *   job.
+ * - a Job is a part of a coroutine's scope and can be used to remember a
+ *   coroutine and cancel it.
  */
 
 fun main(): Unit = runBlocking {
@@ -40,5 +45,6 @@ fun main(): Unit = runBlocking {
     withContext(this@runBlocking.coroutineContext) {
         updateUI()
     }
-    refreshUser()
+    val job = launch { refreshUser() }
+    job.cancel()
 }
