@@ -38,13 +38,16 @@ fun main(): Unit = runBlocking {
      * results until it is available (async coroutine is done executing)
      * this facilitates parallel execution of both coroutines
      */
-    val task1 = async { refreshTasks() }
-    val task2 = async { refreshReservation() }
+    val job1 = launch {
+        val task1 = async { refreshTasks() }
+        val task2 = async { refreshReservation() }
 
-    awaitAll(task1, task2)
-    withContext(this@runBlocking.coroutineContext) {
-        updateUI()
+        awaitAll(task1, task2)
+        withContext(this@runBlocking.coroutineContext) {
+            updateUI()
+        }
     }
-    val job = launch { refreshUser() }
-    job.cancel()
+    val job2 = launch { refreshUser() }
+
+    cancelJobs(job1, job2)
 }
