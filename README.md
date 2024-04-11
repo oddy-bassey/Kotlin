@@ -15,7 +15,7 @@ Java Class Library, but type inference allows its syntax to be more concise.
 ## Advanced Kotlin
 * Object Oriented Programming (OOP)
 * Idiomatic Kotlin
-* Asynchronous code with Kotlin coroutines
+* Asynchronous code with Kotlin coroutines`
 
 ## Note
 Key features that provide first class solutions to some of the most common programming problems
